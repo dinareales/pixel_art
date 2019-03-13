@@ -42,9 +42,19 @@ var grilla = document.getElementById("grilla-pixeles");
 function crear_paleta() {
   for (var i = 0; i < nombreColores.length; i++) {
     var contenedor = document.createElement('div');
-    contenedor.textContent = nombreColores[i];
-    contenedor.style.backgroundColor = color; 
+    contenedor.style.backgroundColor =  nombreColores[i]; 
     contenedor.className = "color-paleta";
     paletas.appendChild(contenedor);
   }
 }
+
+//creamos la grilla
+function crear_grilla() {
+  for (var i = 0; i < 1750; i++) {
+    var pixel = document.createElement('div');
+    grilla.appendChild(pixel);
+  } 
+}
+
+crear_paleta();
+crear_grilla();
