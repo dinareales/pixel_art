@@ -67,7 +67,7 @@ function cambiarColor(e) {
 //pinta el pixel si esta apretado el mouse
 function PintarPixel(e) {
   if(clickPresionado)
-  e.target.style.backgroundColor = colorIndicador.style.backgroundColor;
+    e.target.style.backgroundColor = colorIndicador.style.backgroundColor;
 }
 
 //funcion que detecta si esta mantenido el click y pinta el trazo al desplazarnos
@@ -102,12 +102,13 @@ function eventos(){
 //CARGAR SUPERHEROES
 
 $('.imgs img').click(function() { 
-    var id = $(this).attr('id');
-    var heroes =  {
-      "batman":batman,"wonder":wonder, 
-      "flash":flash, "invisible":invisible
+  var id = $(this).attr('id');
+  var heroes =  {
+      "batman": batman,"wonder": wonder, 
+      "flash": flash, "invisible": invisible
     };
-    cargarSuperheroe(heroes[id]);
+  var heroe =  id  in heroes ? heroes[id] : alert("No existe el heroe "+  id);
+  cargarSuperheroe(heroes[id]);
 });
 
 //llamamos las funciones que nos dibujan la paleta y la grilla y los eventos del mouse
